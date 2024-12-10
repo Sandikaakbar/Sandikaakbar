@@ -1,27 +1,20 @@
-def tentukan_nilai_huruf(nilai):
-    """Fungsi untuk menentukan nilai huruf berdasarkan nilai yang diberikan."""
-    if nilai > 90:
-        return 'A'
-    elif nilai > 80:
-        return 'B'
-    elif nilai > 70:
-        return 'C'
-    elif nilai > 60:
-        return 'D'
-    else:
-        return 'E'
+nilai = int(input("masukan nilaimu : "))
 
-# Meminta input nilai dari pengguna
-try:
-    nilai = float(input("Masukkan nilai Anda (0-100): "))
-    
-    # Validasi input
-    if 0 <= nilai <= 100:
-        # Menentukan nilai huruf
-        nilai_huruf = tentukan_nilai_huruf(nilai)
-        # Menampilkan hasil
-        print(f"Nilai huruf Anda adalah: {nilai_huruf}")
-    else:
-        print("Nilai harus berada dalam rentang 0 hingga 100.")
-except ValueError:
-    print("Input tidak valid. Harap masukkan angka.")
+if nilai > 90:
+    print("nilai kamu A")
+elif nilai >= 85 and nilai < 90:
+    print("nilai kamu A-")
+elif nilai >= 80 and nilai < 85:
+    print("nilai kamu B+")
+elif nilai >= 75 and nilai < 80:
+    print("nilai kamu B")
+elif nilai >= 70 and nilai < 75:
+    print("nilai kamu B-")
+elif nilai >= 65 and nilai < 70:
+    print("nilai kamu C+")
+elif nilai >= 60 and nilai < 65:
+    print("nilai kamu C")
+elif nilai >= 55 and nilai < 60:
+    print("nilai kamu D")
+elif nilai < 55:
+    print("nilai kamu E")
